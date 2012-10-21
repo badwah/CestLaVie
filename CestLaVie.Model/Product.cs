@@ -7,8 +7,8 @@ namespace CestLaVie.Model
 {
     public class Product
     {
-        public String Id { get; set; }
-        public String Name { get; set; }
-        public String Description { get; set; }
+        public virtual String Id { get; set; }
+        public virtual String Name { get; set; }
+        public virtual String Description { get; set; }
     }
 }

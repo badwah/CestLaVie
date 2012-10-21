@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 using CestLaVie.Common.Repository;
+using CestLaVie.Common.Repository.Interfaces;
 using CestLaVie.Common.Repository.NHibernate;
 using CestLaVie.Model;
 using CestLaVie.Repository.Interfaces;

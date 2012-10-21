@@ -1,4 +1,4 @@
-﻿using CestLaVie.Common.Repository;
+﻿using CestLaVie.Common.Repository.Interfaces;
 using CestLaVie.Model;
 
 namespace CestLaVie.Repository.Interfaces

@@ -3,7 +3,6 @@
                    assembly="CestLaVie.Model"
                    namespace="CestLaVie.Model"
                    default-lazy="false">
-
   <!-- more mapping info here -->
   <class name="Product" table="Product">
     <id name="Id">

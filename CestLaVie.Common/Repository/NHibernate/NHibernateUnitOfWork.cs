@@ -1,4 +1,5 @@
-﻿using NHibernate;
+﻿using CestLaVie.Common.Repository.Interfaces;
+using NHibernate;
 
 namespace CestLaVie.Common.Repository.NHibernate
 {

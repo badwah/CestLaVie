@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{61352F60-19C8-457F-9624-7DCF6A2A82BD}</ProjectGuid>
+    <ProjectGuid>{716BE5B5-09B2-4312-A42C-CEC10A7C0622}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CestLaVie.Repository</RootNamespace>
-    <AssemblyName>CestLaVie.Repository</AssemblyName>
+    <RootNamespace>CestLaVie.Repository.Storage.NHibernate.Test</RootNamespace>
+    <AssemblyName>CestLaVie.Repository.Storage.NHibernate.Test</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,8 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.1\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\packages\System.Data.SQLite.1.0.82.0\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\packages\System.Data.SQLite.1.0.82.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,8 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IProductRepository.cs" />
+    <Compile Include="ProductRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CestLaVie.Common\CestLaVie.Common.csproj">
@@ -53,6 +66,22 @@
       <Project>{C2846237-16AB-4B48-B708-CE4EEE738290}</Project>
       <Name>CestLaVie.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CestLaVie.Repository.Storage.NHibernate\CestLaVie.Repository.Storage.NHibernate.csproj">
+      <Project>{C6D640D4-0EFE-40C9-ADA7-94E0D50B3700}</Project>
+      <Name>CestLaVie.Repository.Storage.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CestLaVie.Repository\CestLaVie.Repository.csproj">
+      <Project>{61352F60-19C8-457F-9624-7DCF6A2A82BD}</Project>
+      <Name>CestLaVie.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace CestLaVie.Common.Repository
+namespace CestLaVie.Common.Repository.Interfaces
 {
     public interface IRepository<T> : IDisposable where T : class
     {
