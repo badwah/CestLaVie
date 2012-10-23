@@ -18,7 +18,7 @@ namespace CestLaVie.Repository.Storage.NHibernate.Repository
 
         public ProductRepository()
         {
-            session = NHibernateHelper<Product>.OpenSession();
+            session = NHibernateHelper<ProductRepository>.OpenSession();
             session.FlushMode = FlushMode.Commit;
             nHibernateUnitOfWork = new NHibernateUnitOfWork(session.BeginTransaction());
         }
